@@ -1,1 +1,1 @@
-### Резюме можно посмотреть [тут](https://kartochka.github.io) 
+### Резюме можно посмотреть [тут](https://miatsenko.github.io) 
