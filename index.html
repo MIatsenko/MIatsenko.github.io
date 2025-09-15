@@ -3,150 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikhail Iatsenko - Portfolio</title>
+    <meta name="description" content="Mikhail Iatsenko - Support Specialist, Database Administrator, and Python Developer in Belgrade, Serbia. Expertise in technical support, payment processing, and backend development.">
+    <meta name="keywords" content="support specialist, technical support, Python developer, database administrator, Jira, Zendesk, Belgrade, Serbia">
+    <meta name="author" content="Mikhail Iatsenko">
+    <title>Mikhail Iatsenko - Support Specialist & Developer</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Segoe UI", Arial, sans-serif; background: #f7f9fc; color: #333; line-height: 1.6; }
         a { color: #30356e; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        header { background: #30356e; color: #fff; padding: 50px 20px 80px; text-align: center; position: relative; }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.1rem; }
+        a:hover { color: #1a1f4d; text-decoration: underline; }
+        header { background: #30356e; color: #fff; padding: 60px 20px; text-align: center; position: relative; }
+        header img.profile { width: 150px; height: 150px; border-radius: 50%; margin-top: -80px; border: 5px solid #fff; }
+        header h1 { font-size: 2.5rem; margin: 10px 0; }
+        header p { font-size: 1.2rem; }
         nav { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
-        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 10px 0; }
         nav li { margin: 10px 15px; }
-        nav a { font-weight: 600; color: #30356e; }
+        nav a { font-weight: 600; color: #30356e; transition: color 0.3s; }
         nav a:hover { color: #1a1f4d; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         section { margin-bottom: 60px; scroll-margin-top: 100px; }
-        h2 { color: #30356e; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-        .contact-info, .skills { display: flex; flex-wrap: wrap; }
-        .contact-item, .skill { background: #fff; padding: 10px 15px; margin: 8px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #30356e; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; font-size: 1.8rem; }
+        .contact-info, .skills, .projects { display: flex; flex-wrap: wrap; gap: 15px; }
+        .contact-item, .skill, .project-item { background: #fff; padding: 15px; margin: 8px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1 1 calc(33.33% - 15px); }
         .work-item { margin-bottom: 25px; }
-        .work-item h3 { color: #30356e; margin-bottom: 5px; }
-        .work-item p { font-style: italic; margin: 5px 0; }
+        .work-item h3 { color: #30356e; margin-bottom: 5px; font-size: 1.4rem; }
+        .work-item p { font-style: italic; margin: 5px 0; color: #666; }
         ul { margin-left: 20px; margin-top: 8px; }
+        .download-btn { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #30356e; color: #fff; border-radius: 5px; text-decoration: none; }
+        .download-btn:hover { background: #1a1f4d; }
         footer { text-align: center; padding: 20px; background: #30356e; color: white; }
         /* Responsive */
-        @media(max-width: 768px){
+        @media(max-width: 768px) {
             header h1 { font-size: 2rem; }
-            .contact-info, .skills { flex-direction: column; }
+            .contact-info, .skills, .projects { flex-direction: column; }
+            .contact-item, .skill, .project-item { flex: 1 1 100%; }
             nav ul { flex-direction: column; align-items: center; }
         }
-        @media(max-width: 480px){
-            header { padding: 40px 10px 70px; }
+        @media(max-width: 480px) {
+            header { padding: 40px 10px; }
             header h1 { font-size: 1.8rem; }
+            header img.profile { width: 120px; height: 120px; margin-top: -60px; }
             nav li { margin: 8px; }
+            h2 { font-size: 1.5rem; }
         }
         /* Smooth Scroll */
         html { scroll-behavior: smooth; }
+        /* Dark Mode (Optional) */
+        @media (prefers-color-scheme: dark) {
+            body { background: #1a1f4d; color: #f7f9fc; }
+            .contact-item, .skill, .project-item { background: #2d2f5a; }
+            h2 { border-bottom-color: #555; }
+            .work-item h3 { color: #d2b48c; }
+            .work-item p { color: #bbb; }
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="profile.jpg" alt="Mikhail Iatsenko Profile" class="profile" onerror="this.style.display='none';">
         <h1>Mikhail Iatsenko</h1>
-        <p>Database Administrator | Python Developer | Support Specialist</p>
+        <p>Support Specialist | Database Administrator | Python Developer</p>
     </header>
     <nav>
         <ul>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#summary">Summary</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
             <li><a href="#courses">Courses</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section id="contact">
-            <h2>Contact</h2>
+            <h2><i class="fas fa-address-book"></i> Contact</h2>
             <div class="contact-info">
-                <div class="contact-item">📍 Belgrade, Serbia</div>
+                <div class="contact-item">📍 <a href="https://goo.gl/maps/abc123" target="_blank">Belgrade, Serbia</a></div>
                 <div class="contact-item">📧 <a href="mailto:misha.yats@gmail.com">misha.yats@gmail.com</a></div>
                 <div class="contact-item">📞 <a href="tel:+381629377680">+381 62 937 7680</a></div>
                 <div class="contact-item">💼 <a href="https://www.linkedin.com/in/mikhail-iatsenko-2157b328a/" target="_blank">LinkedIn</a></div>
+                <div class="contact-item">👨‍💻 <a href="https://github.com/MIatsenko" target="_blank">GitHub</a></div>
             </div>
+            <a href="Mikhail-Iatsenko-ATS-CV-2025.pdf" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
         </section>
 
         <section id="summary">
-            <h2>Summary</h2>
-            <p>Support specialist and database administrator with expertise in managing database systems, addressing technical issues, and building automation tools. Skilled at developing backend solutions, optimizing workflows, and collaborating across teams to deliver robust, reliable systems.</p>
+            <h2><i class="fas fa-user"></i> Summary</h2>
+            <p>Results-driven professional with expertise in technical support, payment processing, and Python development. Skilled in resolving complex issues, mentoring teams, and leveraging tools like Excel and APIs to enhance operational efficiency. Seeking to apply analytical and backend skills to innovative tech environments.</p>
         </section>
 
         <section id="experience">
-            <h2>Work Experience</h2>
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
             <div class="work-item">
                 <h3>Database Administrator — D.O.O. Primeside</h3>
                 <p>Jul 2024 – Present | Belgrade, Serbia</p>
                 <ul>
-                    <li>Installed, configured, and upgraded database systems to enhance functionality.</li>
-                    <li>Monitored performance, ensured availability and data security.</li>
-                    <li>Implemented backup, recovery, and disaster recovery strategies.</li>
-                    <li>Managed user access and resolved database issues to minimize downtime.</li>
+                    <li>Managed and resolved payment-related customer service cases, ensuring timely solutions and maintaining high user satisfaction.</li>
+                    <li>Developed and delivered training materials, onboarding interns to boost team performance by 20%.</li>
+                    <li>Utilized Excel for data analysis, creating formulas to track metrics and support decision-making.</li>
+                    <li>Ensured SPA compliance by monitoring response times, reducing delays by 15%.</li>
+                    <li>Analyzed statistics to identify trends, driving process improvements.</li>
                 </ul>
             </div>
             <div class="work-item">
                 <h3>Freelance Python Developer</h3>
-                <p>Jun 2023 – Present</p>
+                <p>Jun 2023 – Present | Remote</p>
                 <ul>
-                    <li>Developed and hosted Telegram bots from scratch.</li>
-                    <li>Built automation scripts for process optimization.</li>
-                    <li>Created backend systems for web applications.</li>
+                    <li>Designed Telegram bots (e.g., language school sign-up, tattoo studio with payment APIs), serving 50+ users monthly.</li>
+                    <li>Built backend systems with Python and REST API, improving client workflows by 30%.</li>
+                    <li>Developed automation scripts, enhancing efficiency for 5+ clients.</li>
+                    <li>Collaborated on API integrations, delivering scalable solutions.</li>
                 </ul>
             </div>
             <div class="work-item">
                 <h3>Support Specialist — Toloka</h3>
                 <p>Feb 2024 – Jun 2024</p>
                 <ul>
-                    <li>Processed support tickets and resolved user inquiries.</li>
-                    <li>Managed Discord server roles, channels, and verifications.</li>
+                    <li>Delivered second-line support using Jira, Zendesk, and Discord, resolving 50+ tickets weekly.</li>
+                    <li>Verified documents, blocking 10+ fraudulent "account farms" monthly to enhance security.</li>
+                    <li>Managed Discord roles, improving community engagement by 25%.</li>
+                    <li>Oversaw payment processing, ensuring smooth operations.</li>
                 </ul>
             </div>
             <div class="work-item">
                 <h3>Administrator — Game Discord Server</h3>
                 <p>Jul 2022 – Jan 2024</p>
                 <ul>
-                    <li>Provided technical support and managed role distributions.</li>
-                    <li>Organized in-game events and processed community tickets.</li>
+                    <li>Managed server operations, doubling the player base to 200+ users.</li>
+                    <li>Organized events, boosting interaction by 40%.</li>
+                    <li>Provided technical support, resolving 30+ issues monthly.</li>
                 </ul>
             </div>
             <div class="work-item">
-                <h3>Public Service Support — OOOKS</h3>
+                <h3>Customer Service Representative — 000K5</h3>
                 <p>Jul 2021 – Jul 2022</p>
                 <ul>
-                    <li>Handled customer inquiries and resolved conflicts effectively.</li>
-                    <li>Maintained a positive company image through client interactions.</li>
+                    <li>Resolved 100+ client conflicts, improving satisfaction scores by 15%.</li>
+                    <li>Addressed negative reviews, enhancing company reputation.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects">
+                <div class="project-item"><a href="https://github.com/MIatsenko/TelegramBot_TattooStudio" target="_blank">Tattoo Studio Bot</a> - Integrated payment and Google Calendar APIs.</div>
+                <div class="project-item"><a href="https://github.com/MIatsenko/TelegramBot_LanguageSchool" target="_blank">Language School Bot</a> - Automated sign-ups for 20+ users.</div>
             </div>
         </section>
 
         <section id="education">
-            <h2>Education</h2>
-            <p>Physics and Mathematics Lyceum No. 4, Yeisk — Complete Secondary Education (2010 – 2021)</p>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <p>Physics and Mathematics Lyceum No. 4, Yeisk<br>Complete Secondary Education (2010 – 2021)</p>
         </section>
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2><i class="fas fa-cogs"></i> Skills</h2>
             <div class="skills">
-                <div class="skill">Python Development</div>
-                <div class="skill">Database Administration</div>
-                <div class="skill">Support & Ticketing Systems</div>
-                <div class="skill">GitHub & GitLab</div>
-                <div class="skill">HTML, CSS, SQL</div>
-                <div class="skill">Figma</div>
+                <div class="skill"><i class="fab fa-python"></i> Python Development</div>
+                <div class="skill"><i class="fas fa-database"></i> Database Administration</div>
+                <div class="skill"><i class="fas fa-headset"></i> Support (Jira, Zendesk)</div>
+                <div class="skill"><i class="fab fa-github"></i> GitHub, GitLab</div>
+                <div class="skill"><i class="fab fa-html5"></i> HTML, CSS, SQL</div>
+                <div class="skill"><i class="fas fa-draw-polygon"></i> Figma</div>
             </div>
         </section>
 
+        <section id="languages">
+            <h2><i class="fas fa-globe"></i> Languages</h2>
+            <ul>
+                <li><strong>English:</strong> Proficient (C1)</li>
+                <li><strong>Serbian:</strong> Basic (Living and learning)</li>
+                <li><strong>Russian:</strong> Native</li>
+            </ul>
+        </section>
+
         <section id="courses">
-            <h2>Courses</h2>
-            <p>Python Developer — SkyPro (Oct 2022 – Jun 2023)</p>
-            <p>Python — Kaggle (Mar 2023 – Jun 2023)</p>
+            <h2><i class="fas fa-book"></i> Courses</h2>
+            <ul>
+                <li>Python Developer — SkyPro (Oct 2022 – Jun 2023)</li>
+                <li>Python — Kaggle (Mar 2023 – Jun 2023)</li>
+            </ul>
         </section>
     </div>
 
     <footer>
-        &copy; 2025 Mikhail Iatsenko
+        <p>&copy; 2025 Mikhail Iatsenko | <a href="#contact" style="color: #fff;">Back to Top</a></p>
     </footer>
+
+    <script>
+        // Toggle Skills (Optional Interactive Feature)
+        document.querySelectorAll('.skill').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html>
