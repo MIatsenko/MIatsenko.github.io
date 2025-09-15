@@ -3,78 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mikhail Iatsenko - Database Administrator, Support Specialist, and Python Developer based in Belgrade, Serbia. Expertise in technical support, payment processing, and backend development.">
+    <meta name="description" content="Mikhail Iatsenko - Database Administrator, Support Specialist, and Python Developer in Belgrade, Serbia. Expertise in technical support, payment processing, and backend development.">
     <meta name="keywords" content="database administrator, support specialist, Python developer, technical support, Jira, Zendesk, Belgrade, Serbia">
-    <title>Mikhail Iatsenko - Professional Portfolio</title>
-    <!-- Font Awesome for Icons -->
+    <title>Mikhail Iatsenko - Database Administrator & Support Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #30356e;
-            --secondary-color: #d2b48c;
-            --background-color: #f7f9fc;
-            --text-color: #333;
-            --card-background: #fff;
-            --accent-color: #1a1f4d;
-        }
-        body.dark-mode {
-            --background-color: #1a1f4d;
-            --text-color: #f7f9fc;
-            --card-background: #2d2f5a;
-            --primary-color: #d2b48c;
-            --accent-color: #30356e;
-        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: "Segoe UI", Arial, sans-serif; background: var(--background-color); color: var(--text-color); line-height: 1.6; transition: background-color 0.3s, color 0.3s; }
-        a { color: var(--primary-color); text-decoration: none; transition: color 0.3s; }
-        a:hover { color: var(--accent-color); text-decoration: underline; }
-        header { background: var(--primary-color); color: #fff; padding: 60px 20px; text-align: center; position: relative; }
+        body { font-family: "Segoe UI", Arial, sans-serif; background: #f7f9fc; color: #333; line-height: 1.6; }
+        a { color: #30356e; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #1a1f4d; }
+        header { background: #30356e; color: #fff; padding: 60px 20px; text-align: center; position: relative; }
         header img.profile { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 5px solid #fff; object-fit: cover; }
         header h1 { font-size: 2.5rem; margin: 10px 0; }
         header p { font-size: 1.2rem; }
-        nav { position: sticky; top: 0; background: var(--card-background); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
-        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 10px 0; }
+        nav { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        nav .menu-toggle { display: none; cursor: pointer; font-size: 24px; color: #30356e; padding: 10px; text-align: right; }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 10px 0; transition: max-height 0.3s ease; max-height: 500px; overflow: hidden; }
+        nav ul.collapsed { max-height: 0; }
         nav li { margin: 10px 15px; }
-        nav a { font-weight: 600; color: var(--primary-color); }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        nav a { font-weight: 600; color: #30356e; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         section { margin-bottom: 60px; scroll-margin-top: 100px; }
-        h2 { color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; font-size: 1.8rem; }
-        .contact-info, .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .contact-item, .skill, .project-item { background: var(--card-background); padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
-        .contact-item:hover, .skill:hover, .project-item:hover { transform: scale(1.05); }
+        h2 { color: #30356e; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; font-size: 1.8rem; }
+        .contact-info, .skills { display: flex; flex-wrap: wrap; gap: 15px; }
+        .contact-item, .skill { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1 1 200px; text-align: center; }
         .work-item { margin-bottom: 30px; }
-        .work-item h3 { color: var(--primary-color); margin-bottom: 5px; font-size: 1.4rem; }
+        .work-item h3 { color: #30356e; margin-bottom: 5px; font-size: 1.4rem; }
         .work-item p { font-style: italic; margin: 5px 0; color: #666; }
-        ul { margin-left: 20px; margin-top: 8px; list-style-type: disc; }
-        .download-btn { display: inline-block; margin-top: 10px; padding: 8px 16px; background: var(--primary-color); color: #fff; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
-        .download-btn:hover { background: var(--accent-color); }
-        .toggle-dark { position: fixed; bottom: 20px; right: 20px; background: var(--primary-color); color: #fff; border: none; padding: 10px; border-radius: 50%; cursor: pointer; z-index: 100; }
-        footer { text-align: center; padding: 20px; background: var(--primary-color); color: white; }
-        /* Responsive */
-        @media (max-width: 768px) { 
-            header h1 { font-size: 2rem; }
-            .contact-info, .skills, .projects { grid-template-columns: 1fr; }
-            nav ul { flex-direction: column; align-items: center; }
+        ul { margin-left: 20px; margin-top: 8px; }
+        .download-btn { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #30356e; color: #fff; border-radius: 5px; text-decoration: none; }
+        .download-btn:hover { background: #1a1f4d; }
+        footer { text-align: center; padding: 20px; background: #30356e; color: white; }
+        /* Mobile Hamburger */
+        @media (max-width: 768px) {
+            nav .menu-toggle { display: block; }
+            nav ul { flex-direction: column; align-items: center; max-height: 0; transition: max-height 0.3s ease; }
+            nav ul.open { max-height: 500px; }
+            nav li { margin: 10px 0; }
+            .contact-info, .skills { flex-direction: column; }
         }
-        @media (max-width: 480px) { 
-            header { padding: 40px 10px; }
-            header h1 { font-size: 1.8rem; }
-            header img.profile { width: 120px; height: 120px; }
-            nav li { margin: 8px; }
-            h2 { font-size: 1.5rem; }
-        }
+        /* Color Contrast Fixes */
+        .work-item p { color: #333; } /* Ensure italics are dark on white */
+        body { color: #333; } /* Default high contrast */
         /* Smooth Scroll */
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
     <header>
-        <img src="profile_pic.jpg" alt="Mikhail Iatsenko Profile Picture" class="profile">
+        <img src="profile_pic.jpg" alt="Mikhail Iatsenko Profile Picture" class="profile" onerror="this.style.display='none';">
         <h1>Mikhail Iatsenko</h1>
         <p>Database Administrator</p>
     </header>
     <nav>
-        <ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <ul id="nav-menu" class="collapsed">
+            <li><a href="#contact">Contact</a></li>
             <li><a href="#summary">Summary</a></li>
             <li><a href="#experience">Work Experience</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -85,6 +69,16 @@
     </nav>
 
     <div class="container">
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">📍 Belgrade, Serbia</div>
+                <div class="contact-item">📧 <a href="mailto:misha.yats@gmail.com">misha.yats@gmail.com</a></div>
+                <div class="contact-item">📞 <a href="tel:+381629377680">+381 62 937 7680</a></div>
+                <div class="contact-item">💼 <a href="https://www.linkedin.com/in/mikhail-iatsenko-2157b328a/" target="_blank">LinkedIn</a></div>
+            </div>
+        </section>
+
         <section id="summary">
             <h2>Summary</h2>
             <p>Results-driven professional with expertise in technical support, payment processing, and Python development. Skilled in resolving complex issues, mentoring teams, and leveraging tools like Excel and APIs to enhance operational efficiency. Seeking to apply analytical and backend development skills to contribute to innovative tech environments.</p>
@@ -94,8 +88,8 @@
         <section id="experience">
             <h2>Work Experience</h2>
             <div class="work-item">
-                <h3>Database Administrator, D.O.O. Primeside</h3>
-                <p>07/2024 – present | Belgrade, Serbia</p>
+                <h3>Database Administrator — D.O.O. Primeside</h3>
+                <p>Jul 2024 – Present | Belgrade, Serbia</p>
                 <ul>
                     <li>Managed and resolved payment-related customer service cases, ensuring timely solutions and maintaining high user satisfaction.</li>
                     <li>Developed and delivered comprehensive training materials, successfully onboarding and mentoring interns to enhance team performance.</li>
@@ -106,7 +100,7 @@
             </div>
             <div class="work-item">
                 <h3>Freelance Python Developer</h3>
-                <p>2023 – Present</p>
+                <p>Jun 2023 – Present</p>
                 <ul>
                     <li>Designed and deployed multiple Telegram bots from scratch, including a language school sign-up bot, a news redirection bot, and a tattoo studio bot integrating payment and Google Calendar APIs, meeting diverse client needs.</li>
                     <li>Developed robust backend systems using Python and REST API, ensuring seamless functionality and efficient data handling for client applications.</li>
@@ -115,8 +109,8 @@
                 </ul>
             </div>
             <div class="work-item">
-                <h3>Support Specialist, Toloka</h3>
-                <p>02/2024 – 06/2024</p>
+                <h3>Support Specialist — Toloka</h3>
+                <p>Feb 2024 – Jun 2024</p>
                 <ul>
                     <li>Delivered second-line support using Jira, Intercom, Zendesk, and Discord, efficiently managing and rerouting tickets to appropriate departments for resolution.</li>
                     <li>Adhered to service performance standards (SPA), ensuring timely responses and maintaining high support quality.</li>
@@ -126,23 +120,19 @@
                 </ul>
             </div>
             <div class="work-item">
-                <h3>Administrator of a Game Discord Server</h3>
-                <p>07/2022 – 01/2024</p>
+                <h3>Administrator — Game Discord Server</h3>
+                <p>Jul 2022 – Jan 2024</p>
                 <ul>
-                    <li>Managed Discord and Project Zomboid server administration, ensuring smooth operations and a welcoming environment for players.</li>
-                    <li>Created and posted ads for the server and events, successfully increasing visibility and attracting new players to the community.</li>
-                    <li>Designed and led engaging in-game events, boosting player interaction and contributing to a thriving server atmosphere.</li>
-                    <li>Collaborated with the moderation team to double the player base, elevating the server to #3 ranking in Germany through effective management and promotion.</li>
-                    <li>Provided technical and informational support to players, resolving issues promptly and enhancing overall user experience.</li>
+                    <li>Provided technical support and managed role distributions.</li>
+                    <li>Organized in-game events and processed community tickets.</li>
                 </ul>
             </div>
             <div class="work-item">
-                <h3>Customer Service Representative, 000K5 (Housing and Communal Services Sector)</h3>
-                <p>07/2021 – 07/2022</p>
+                <h3>Public Service Support — 000K5</h3>
+                <p>Jul 2021 – Jul 2022</p>
                 <ul>
-                    <li>Monitored and addressed negative client reviews for communal housing services, identifying issues and implementing solutions to improve satisfaction.</li>
-                    <li>Resolved customer conflicts through effective communication and information clarification, leading to positive outcomes and reduced complaints.</li>
-                    <li>Enhanced client reputation by strategically managing feedback and fostering better relationships with residents.</li>
+                    <li>Handled customer inquiries and resolved conflicts effectively.</li>
+                    <li>Maintained a positive company image through client interactions.</li>
                 </ul>
             </div>
         </section>
@@ -150,41 +140,42 @@
         <section id="skills">
             <h2>Skills</h2>
             <div class="skills">
-                <div class="skill"><i class="fas fa-headset"></i> Support Agent</div>
-                <div class="skill"><i class="fab fa-python"></i> Python</div>
-                <div class="skill"><i class="fab fa-github"></i> GitHub, GitLab</div>
-                <div class="skill"><i class="fab fa-html5"></i> HTML, CSS, SQL</div>
-                <div class="skill"><i class="fas fa-draw-polygon"></i> Figma</div>
+                <div class="skill">Python Development</div>
+                <div class="skill">Database Administration</div>
+                <div class="skill">Support & Ticketing Systems</div>
+                <div class="skill">GitHub & GitLab</div>
+                <div class="skill">HTML, CSS, SQL</div>
+                <div class="skill">Figma</div>
             </div>
         </section>
 
         <section id="languages">
             <h2>Languages</h2>
-            <div class="contact-info">
-                <div class="contact-item">English - Proficient in technical communication</div>
-                <div class="contact-item">Serbian - Living and learning</div>
-                <div class="contact-item">Russian - Native</div>
-            </div>
+            <p>English: Proficient in technical communication</p>
+            <p>Serbian: Living and learning</p>
+            <p>Russian: Native</p>
         </section>
 
         <section id="courses">
             <h2>Courses</h2>
-            <ul>
-                <li>Python Developer — SkyPro (10/2022 – 06/2023)</li>
-                <li>Python — Kaggle (03/2023 – 06/2023)</li>
-            </ul>
+            <p>Python Developer — SkyPro (Oct 2022 – Jun 2023)</p>
+            <p>Python — Kaggle (Mar 2023 – Jun 2023)</p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <p>Complete secondary education - Physics and Mathematics Lyceum No. 4, Yeisk (09/2010 – 05/2021)</p>
+            <p>Physics and Mathematics Lyceum No. 4, Yeisk — Complete Secondary Education (2010 – 2021)</p>
         </section>
     </div>
-
-    <button class="toggle-dark" onclick="document.body.classList.toggle('dark-mode');"><i class="fas fa-moon"></i></button>
 
     <footer>
         &copy; 2025 Mikhail Iatsenko
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
