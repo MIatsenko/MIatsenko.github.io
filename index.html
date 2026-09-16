@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mikhail Iatsenko — Fraud Operations Specialist &amp; Analyst</title>
-<meta name="description" content="Mikhail Iatsenko — fraud operations specialist and analyst in Novi Sad, Serbia. Transaction monitoring, fraud investigations, reporting with SQL and Python.">
+<meta name="description" content="Mikhail Iatsenko — fraud operations specialist and analyst in Novi Sad, Serbia. Transaction monitoring, fraud investigations, KYC, SQL and Python.">
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,17 +26,11 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);color:var(--ink);
-    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    font-size:16px;line-height:1.65;font-weight:400;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{background:var(--bg);color:var(--ink);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:var(--max);margin:0 auto;padding:44px 28px 72px;display:grid;grid-template-columns:330px 1fr;gap:44px;align-items:start}
 
-  /* ---------- sidebar ---------- */
   aside{position:sticky;top:36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 14px 36px -24px rgba(60,48,32,.55)}
   .portrait{border-radius:12px;overflow:hidden;border:1px solid #cbbda8;background:#2a2a26}
   .portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 16%}
@@ -54,7 +48,6 @@
   .lang div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px}
   .lang i{font-style:normal;color:var(--ink-dim);font-size:.82rem}
 
-  /* ---------- main ---------- */
   section{margin-bottom:38px}
   .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-weight:400;margin-bottom:14px;display:flex;align-items:center;gap:12px}
   .label::after{content:"";flex:1;height:1px;background:var(--line-2)}
@@ -121,14 +114,18 @@
     <div class="chips">
       <span class="chip">Transaction monitoring</span>
       <span class="chip">Fraud investigations</span>
-      <span class="chip">Chargebacks &amp; complaints</span>
       <span class="chip">KYC / document verification</span>
+      <span class="chip">Law-enforcement requests</span>
+      <span class="chip">Chargebacks &amp; complaints</span>
       <span class="chip">SQL</span>
       <span class="chip">Python</span>
       <span class="chip">Excel / reporting</span>
       <span class="chip">REST APIs</span>
-      <span class="chip">Jira · Zendesk · Intercom</span>
-      <span class="chip">Git / GitHub</span>
+      <span class="chip">Zendesk</span>
+      <span class="chip">Jira</span>
+      <span class="chip">Intercom</span>
+      <span class="chip">Slack</span>
+      <span class="chip">Git / GitHub / GitLab</span>
       <span class="chip">HTML / CSS</span>
       <span class="chip">Figma</span>
     </div>
@@ -137,7 +134,7 @@
     <div class="lang">
       <div><b>Russian</b><i>native</i></div>
       <div><b>English</b><i>C1 · working language</i></div>
-      <div><b>Serbian</b><i>A1 · in progress</i></div>
+      <div><b>Serbian</b><i>basic</i></div>
     </div>
   </aside>
 
@@ -146,11 +143,10 @@
       <div class="label">Profile</div>
       <p class="lead">
         Fraud operations specialist with four years across trust &amp; safety, payment support and data work.
-        At Paysend I review transactions in real time, take account block and release decisions, investigate
-        fraudulent activity and take complaints through to resolution with partner banks. I read numbers
-        carefully, keep audit trails clean, and use SQL, Excel and Python to turn case work into reports
-        that actually get used. Python is my second language — I build the small tools that remove a manual
-        step someone repeats every day.
+        At Paysend I investigate payment transactions in real time, make risk-based decisions on blocked
+        accounts, verify documents under KYC and answer law-enforcement requests. I keep audit trails clean
+        and use SQL, Excel and Python to turn case work into reports that actually get used — Python is my
+        second language, and I build the small tools that remove a manual step someone repeats every day.
       </p>
     </section>
 
@@ -163,12 +159,11 @@
           <h3>Fraud Operator</h3>
           <p class="org">Paysend Technology Limited, Ogranak Beograd · Belgrade, Serbia · remote</p>
           <ul>
-            <li>Real-time transaction monitoring in a specialised fraud platform.</li>
-            <li>Blocking and releasing accounts; decisions on flagged transactions.</li>
-            <li>Investigating suspected fraudulent activity and documenting evidence.</li>
-            <li>Handling customer complaints and disputed cases end to end.</li>
-            <li>Liaising with third-party financial institutions after investigations.</li>
-            <li>Identifying new fraud patterns and feeding them back into detection rules.</li>
+            <li>Monitor and investigate payment transactions in real time to detect fraudulent activity — analysing sender and recipient accounts, shared devices and common recipients for high-risk patterns.</li>
+            <li>Verify customer documents as part of KYC checks and process law-enforcement requests for account and transaction data, ensuring accurate and timely responses.</li>
+            <li>Review blocked sender and recipient accounts and make risk-based decisions between unlocking accounts and terminating cooperation.</li>
+            <li>Query and analyse transaction data in SQL to support investigations and data-driven decisions.</li>
+            <li>Coordinate case resolution with internal teams via Zendesk and Slack, keeping documentation clear and meeting SPA standards.</li>
           </ul>
         </div>
       </div>
@@ -179,10 +174,24 @@
           <h3>Database Administrator</h3>
           <p class="org">D.O.O. Primeside · Belgrade, Serbia</p>
           <ul>
-            <li>Handled payment-related customer cases, keeping resolution times inside the service agreement.</li>
-            <li>Built Excel models and reports to track performance metrics and support decisions.</li>
-            <li>Collected and analysed statistics to spot trends and improve process efficiency.</li>
-            <li>Wrote and delivered training material; onboarded and mentored interns.</li>
+            <li>Managed and resolved payment-related customer service cases, keeping resolution times inside the service agreement.</li>
+            <li>Built Excel models and tables to track performance metrics and support decision-making.</li>
+            <li>Collected and analysed statistics to identify trends and improve process efficiency.</li>
+            <li>Wrote and delivered comprehensive training material; onboarded and mentored interns.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2023 — Present</div>
+        <div>
+          <h3>Freelance Python Developer</h3>
+          <p class="org">Self-employed · remote</p>
+          <ul>
+            <li>Designed and deployed multiple Telegram bots from scratch — a language-school sign-up bot, a news redirect bot, and a tattoo-studio booking bot with payments and Google Calendar APIs.</li>
+            <li>Built backend systems in Python against REST APIs — data handling, webhooks, scheduled jobs.</li>
+            <li>Engineered custom automation that removed manual steps from client workflows.</li>
+            <li>Worked directly with clients end to end: scoping, delivery, handover.</li>
           </ul>
         </div>
       </div>
@@ -193,22 +202,10 @@
           <h3>Support Specialist</h3>
           <p class="org">Toloka · remote</p>
           <ul>
-            <li>Second-line support via Jira, Intercom, Zendesk and Discord; routed tickets to the right teams.</li>
-            <li>Verified user documents and identified “account farms” — blocking fraudulent accounts.</li>
-            <li>Ran payment processing and user permissions; resolved access issues without escalation.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="job">
-        <div class="when">Jun 2023 — Present</div>
-        <div>
-          <h3>Freelance Python Developer</h3>
-          <p class="org">Self-employed · remote</p>
-          <ul>
-            <li>Telegram bots from scratch: language-school sign-up, news redirect, studio booking with payments and Google Calendar.</li>
-            <li>Backend work in Python against REST APIs — data handling, webhooks, scheduled jobs.</li>
-            <li>Client-facing end to end: scoping, delivery, handover.</li>
+            <li>Delivered second-line support via Jira, Intercom, Zendesk and Discord; routed tickets to the right departments.</li>
+            <li>Verified user documents and identified “account farms” — proactively blocking fraudulent accounts.</li>
+            <li>Managed Discord roles and invitations, keeping the community organised.</li>
+            <li>Adhered to service performance standards on response times.</li>
           </ul>
         </div>
       </div>
@@ -216,12 +213,14 @@
       <div class="job">
         <div class="when">Jul 2022 — Jan 2024</div>
         <div>
-          <h3>Community Administrator</h3>
-          <p class="org">Game Discord server · remote</p>
+          <h3>Administrator of a game Discord server</h3>
+          <p class="org">Remote</p>
           <ul>
-            <li>Ran Discord and Project Zomboid server administration, moderation and support.</li>
-            <li>Doubled the player base with the moderation team — server reached #3 ranking in Germany.</li>
-            <li>Designed and ran in-game events; handled promotion and player onboarding.</li>
+            <li>Ran Discord and Project Zomboid server administration, keeping operations smooth and the environment welcoming.</li>
+            <li>Created and posted ads for the server and events, growing visibility and attracting new players.</li>
+            <li>Designed and led in-game events, boosting player interaction.</li>
+            <li>With the moderation team, doubled the player base — the server reached #3 ranking in Germany.</li>
+            <li>Provided technical and informational support to players.</li>
           </ul>
         </div>
       </div>
@@ -229,11 +228,12 @@
       <div class="job">
         <div class="when">Jul 2021 — Jul 2022</div>
         <div>
-          <h3>Public Service Support</h3>
-          <p class="org">000K5 · remote</p>
+          <h3>Customer Service Representative</h3>
+          <p class="org">000K5 · Housing and Communal Services Sector</p>
           <ul>
-            <li>Monitored and resolved negative client reviews for communal housing services.</li>
-            <li>De-escalated conflicts through direct communication; reduced repeat complaints.</li>
+            <li>Monitored and addressed negative client reviews for communal housing services, implementing fixes to improve satisfaction.</li>
+            <li>Resolved customer conflicts through communication and clarification, reducing repeat complaints.</li>
+            <li>Improved client reputation by managing feedback and relationships with residents.</li>
           </ul>
         </div>
       </div>
@@ -242,16 +242,16 @@
     <section class="reveal">
       <div class="label">Education &amp; Courses</div>
       <div class="entry">
-        <div class="when">2022 — 2023</div>
+        <div class="when">Oct 2022 — Jun 2023</div>
         <div><h3>Python Developer</h3><p>SkyPro — online university for digital professions</p></div>
       </div>
       <div class="entry">
-        <div class="when">2023</div>
+        <div class="when">Mar 2023 — Jun 2023</div>
         <div><h3>Python</h3><p>Kaggle — online course</p></div>
       </div>
       <div class="entry">
-        <div class="when">Graduated 2021</div>
-        <div><h3>Physics &amp; Mathematics Lyceum No. 4</h3><p>Yeysk, Russia — complete secondary education</p></div>
+        <div class="when">Sep 2010 — May 2021</div>
+        <div><h3>Complete secondary education</h3><p>Physics and Mathematics Lyceum No. 4, Yeisk</p></div>
       </div>
     </section>
 
