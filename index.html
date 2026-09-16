@@ -1,181 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mikhail Iatsenko - Database Administrator, Support Specialist, and Python Developer in Belgrade, Serbia. Expertise in technical support, payment processing, and backend development.">
-    <meta name="keywords" content="database administrator, support specialist, Python developer, technical support, Jira, Zendesk, Belgrade, Serbia">
-    <title>Mikhail Iatsenko - Database Administrator & Support Specialist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: "Segoe UI", Arial, sans-serif; background: #f7f9fc; color: #333; line-height: 1.6; }
-        a { color: #30356e; text-decoration: none; transition: color 0.3s; }
-        a:hover { color: #1a1f4d; }
-        header { background: #30356e; color: #fff; padding: 60px 20px; text-align: center; position: relative; }
-        header img.profile { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 5px solid #fff; object-fit: cover; }
-        header h1 { font-size: 2.5rem; margin: 10px 0; }
-        header p { font-size: 1.2rem; }
-        nav { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
-        nav .menu-toggle { display: none; cursor: pointer; font-size: 24px; color: #30356e; padding: 10px; text-align: right; }
-        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; padding: 10px 0; transition: max-height 0.3s ease; max-height: 500px; overflow: hidden; }
-        nav ul.collapsed { max-height: 0; }
-        nav li { margin: 10px 15px; text-align: center; width: 100%; padding: 5px 0; }
-        nav a { font-weight: 600; color: #30356e; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        section { margin-bottom: 60px; scroll-margin-top: 100px; }
-        h2 { color: #30356e; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 5px; font-size: 1.8rem; }
-        .contact-info, .skills { display: flex; flex-wrap: wrap; gap: 15px; }
-        .contact-item, .skill { background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 0 1 auto; text-align: center; }
-        .work-item { margin-bottom: 30px; }
-        .work-item h3 { color: #30356e; margin-bottom: 5px; font-size: 1.4rem; }
-        .work-item p { font-style: italic; margin: 5px 0; color: #333; }
-        ul { margin-left: 20px; margin-top: 8px; word-break: break-word; }
-        footer { text-align: center; padding: 20px; background: #30356e; color: white; }
-        /* Mobile Hamburger */
-        @media (max-width: 768px) {
-            nav .menu-toggle { display: block; }
-            nav ul { flex-direction: column; align-items: center; max-height: 0; transition: max-height 0.3s ease; display: none; }
-            nav ul.open { max-height: 500px; display: block; }
-            nav li { margin: 10px 0; width: 100%; border-bottom: 1px solid #ccc; }
-            .contact-info, .skills { flex-direction: column; }
-        }
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mikhail Iatsenko — Fraud Operations Specialist &amp; Analyst</title>
+<meta name="description" content="Mikhail Iatsenko — fraud operations specialist and analyst in Novi Sad, Serbia. Transaction monitoring, fraud investigations, reporting with SQL and Python.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ece3d6;
+    --card:#f7f0e4;
+    --ink:#26201a;
+    --ink-2:#4d4438;
+    --ink-dim:#7e7365;
+    --line:#ddd1bf;
+    --line-2:#cdbfa9;
+    --accent:#28563f;
+    --accent-2:#1d4230;
+    --accent-soft:#e3e7da;
+    --radius:16px;
+    --max:1160px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.65;font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:44px 28px 72px;display:grid;grid-template-columns:330px 1fr;gap:44px;align-items:start}
+
+  /* ---------- sidebar ---------- */
+  aside{position:sticky;top:36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 14px 36px -24px rgba(60,48,32,.55)}
+  .portrait{border-radius:12px;overflow:hidden;border:1px solid #cbbda8;background:#2a2a26}
+  .portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 16%}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:1.68rem;line-height:1.15;letter-spacing:-.005em;margin:18px 0 4px;color:var(--ink)}
+  .role{color:var(--accent);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
+  .meta{margin-top:18px;border-top:1px solid var(--line);padding-top:16px;display:grid;gap:9px}
+  .meta a,.meta span{display:flex;gap:9px;align-items:baseline;font-size:.88rem;color:var(--ink-2)}
+  .meta a{color:var(--ink-2)}
+  .meta a:hover{color:var(--accent)}
+  .ico{color:var(--accent);flex:none;width:15px;text-align:center;font-size:.8rem}
+  .side-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-dim);margin:22px 0 10px;font-weight:400}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:.76rem;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-2);border:1px solid #ccd5c4}
+  .lang{display:grid;gap:7px;font-size:.86rem}
+  .lang div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+  .lang i{font-style:normal;color:var(--ink-dim);font-size:.82rem}
+
+  /* ---------- main ---------- */
+  section{margin-bottom:38px}
+  .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-weight:400;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .label::after{content:"";flex:1;height:1px;background:var(--line-2)}
+  .lead{font-size:1.06rem;line-height:1.75;color:var(--ink-2);max-width:64ch}
+
+  .job{display:grid;grid-template-columns:132px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+  .job:first-of-type{border-top:none;padding-top:0}
+  .when{font-size:.82rem;color:var(--ink-dim);letter-spacing:.02em;padding-top:2px;font-variant-numeric:tabular-nums}
+  .when.now{color:var(--accent)}
+  .job h3{font-size:1.02rem;font-weight:500}
+  .org{color:var(--ink-dim);font-size:.88rem;margin:1px 0 9px}
+  .job ul{list-style:none;display:grid;gap:5px}
+  .job li{position:relative;padding-left:16px;font-size:.93rem;color:var(--ink-2)}
+  .job li::before{content:"";position:absolute;left:2px;top:.66em;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.5}
+
+  .entry{display:grid;grid-template-columns:132px 1fr;gap:20px;padding:13px 0;border-top:1px solid var(--line)}
+  .entry:first-of-type{border-top:none;padding-top:0}
+  .entry h3{font-size:.98rem;font-weight:500}
+  .entry p{color:var(--ink-dim);font-size:.88rem;margin-top:2px}
+
+  footer{border-top:1px solid var(--line);margin-top:10px;padding-top:18px;color:var(--ink-dim);font-size:.8rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  .reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    .wrap{grid-template-columns:1fr;gap:28px;padding:26px 18px 56px}
+    aside{position:static}
+    .portrait{max-width:260px}
+    .job,.entry{grid-template-columns:1fr;gap:5px}
+    .when{padding-top:0}
+  }
+  @media print{
+    :root{--bg:#fff;--card:#fff}
+    body{font-size:10.5pt;background:#fff}
+    .wrap{padding:0;display:block;max-width:none}
+    aside{position:static;border:none;box-shadow:none;padding:0;display:flex;gap:20px;align-items:center;margin-bottom:18px}
+    .portrait{width:104px;flex:none;border-radius:8px}
+    .meta{display:none}
+    .side-label{margin:8px 0 6px}
+    section{margin-bottom:16px;break-inside:avoid}
+    .job,.entry{break-inside:avoid;padding:10px 0}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
 </head>
 <body>
-    <header>
-        <img src="profile_pic.jpg" alt="Mikhail Iatsenko Profile Picture" class="profile" onerror="this.style.display='none';">
-        <h1>Mikhail Iatsenko</h1>
-        <p>Database Administrator</p>
-    </header>
-    <nav aria-label="Main navigation">
-        <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu"><i class="fas fa-bars"></i></div>
-        <ul id="nav-menu" class="collapsed">
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#experience">Work Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#languages">Languages</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
-    </nav>
+<div class="wrap">
 
-    <div class="container">
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">📍 Belgrade, Serbia</div>
-                <div class="contact-item">📧 <a href="mailto:misha.yats@gmail.com">misha.yats@gmail.com</a></div>
-                <div class="contact-item">📞 <a href="tel:+381629377680">+381 62 937 7680</a></div>
-                <div class="contact-item">💼 <a href="https://www.linkedin.com/in/mikhail-iatsenko-2157b328a/" target="_blank">LinkedIn</a></div>
-            </div>
-        </section>
+  <aside class="reveal">
+    <div class="portrait"><img src="portrait.jpg" alt="Mikhail Iatsenko"></div>
+    <h1>Mikhail Iatsenko</h1>
+    <p class="role">Fraud Operations Specialist · Analyst</p>
 
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Results-driven professional with expertise in technical support, payment processing, and Python development. Skilled in resolving complex issues, mentoring teams, and leveraging tools like Excel and APIs to enhance operational efficiency. Seeking to apply analytical and backend development skills to contribute to innovative tech environments.</p>
-        </section>
-
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <div class="work-item">
-                <h3>Database Administrator — D.O.O. Primeside</h3>
-                <p>Jul 2024 – Present | Belgrade, Serbia</p>
-                <ul>
-                    <li>Managed and resolved payment-related customer service cases, ensuring timely solutions and maintaining high user satisfaction.</li>
-                    <li>Developed and delivered comprehensive training materials, successfully onboarding and mentoring interns to enhance team performance.</li>
-                    <li>Utilized Excel for data analysis, creating formulas and tables to track performance metrics and support decision-making processes.</li>
-                    <li>Ensured compliance with Service Performance Agreement (SPA) standards by monitoring response times and improving support efficiency.</li>
-                    <li>Collected and analyzed statistics to identify trends, contributing to process improvements and operational effectiveness.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h3>Freelance Python Developer</h3>
-                <p>Jun 2023 – Present</p>
-                <ul>
-                    <li>Designed and deployed multiple Telegram bots from scratch, including a language school sign-up bot, a news redirection bot, and a tattoo studio bot integrating payment and Google Calendar APIs, meeting diverse client needs.</li>
-                    <li>Developed robust backend systems using Python and REST API, ensuring seamless functionality and efficient data handling for client applications.</li>
-                    <li>Engineered custom automation solutions, enhancing operational workflows for clients and demonstrating adaptability across different project requirements.</li>
-                    <li>Collaborated directly with clients to implement API integrations, delivering scalable and reliable solutions that improved their business processes.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h3>Support Specialist — Toloka</h3>
-                <p>Feb 2024 – Jun 2024</p>
-                <ul>
-                    <li>Delivered second-line support using Jira, Intercom, Zendesk, and Discord, efficiently managing and rerouting tickets to appropriate departments for resolution.</li>
-                    <li>Adhered to service performance standards (SPA), ensuring timely responses and maintaining high support quality.</li>
-                    <li>Verified user documents and identified "account farms," proactively blocking fraudulent accounts to enhance platform security.</li>
-                    <li>Managed Discord roles and invitations, fostering an organized community and improving user engagement.</li>
-                    <li>Oversaw payment processing and user permissions, resolving issues promptly to ensure smooth platform operations.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h3>Administrator — Game Discord Server</h3>
-                <p>Jul 2022 – Jan 2024</p>
-                <ul>
-                    <li>Managed Discord and Project Zomboid server administration, ensuring smooth operations and a welcoming environment for players.</li>
-                    <li>Created and posted ads for the server and events, successfully increasing visibility and attracting new players to the community.</li>
-                    <li>Designed and led engaging in-game events, boosting player interaction and contributing to a thriving server atmosphere.</li>
-                    <li>Collaborated with the moderation team to double the player base, elevating the server to #3 ranking in Germany through effective management and promotion.</li>
-                    <li>Provided technical and informational support to players, resolving issues promptly and enhancing overall user experience.</li>
-                </ul>
-            </div>
-            <div class="work-item">
-                <h3>Public Service Support — 000K5</h3>
-                <p>Jul 2021 – Jul 2022</p>
-                <ul>
-                    <li>Monitored and addressed negative client reviews for communal housing services, identifying issues and implementing solutions to improve satisfaction.</li>
-                    <li>Resolved customer conflicts through effective communication and information clarification, leading to positive outcomes and reduced complaints.</li>
-                    <li>Enhanced client reputation by strategically managing feedback and fostering better relationships with residents.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill">Python</div>
-                <div class="skill">GitHub, GitLab</div>
-                <div class="skill">HTML, CSS, SQL</div>
-                <div class="skill">Figma</div>
-            </div>
-        </section>
-
-        <section id="languages">
-            <h2>Languages</h2>
-            <p>English: C1 (Proficient in technical communication)</p>
-            <p>Serbian: A1 (Basic)</p>
-            <p>Russian: Native</p>
-        </section>
-
-        <section id="courses">
-            <h2>Courses</h2>
-            <p>Python Developer — SkyPro (Oct 2022 – Jun 2023)</p>
-            <p>Python — Kaggle (Mar 2023 – Jun 2023)</p>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <p>Physics and Mathematics Lyceum No. 4, Yeisk — Complete Secondary Education (2010 – 2021)</p>
-        </section>
+    <div class="meta">
+      <a href="mailto:misha.yats@gmail.com"><span class="ico">✉</span> misha.yats@gmail.com</a>
+      <a href="tel:+381629377680"><span class="ico">☎</span> +381 62 937 7680</a>
+      <span><span class="ico">◈</span> Novi Sad, Serbia · remote</span>
+      <a href="https://www.linkedin.com/in/mikhail-iatsenko-2157b328a/" target="_blank" rel="noopener"><span class="ico">in</span> LinkedIn</a>
+      <a href="https://github.com/MIatsenko" target="_blank" rel="noopener"><span class="ico">⌥</span> github.com/MIatsenko</a>
     </div>
 
-    <footer>
-        &copy; 2025 Mikhail Iatsenko
-    </footer>
+    <div class="side-label">Core skills</div>
+    <div class="chips">
+      <span class="chip">Transaction monitoring</span>
+      <span class="chip">Fraud investigations</span>
+      <span class="chip">Chargebacks &amp; complaints</span>
+      <span class="chip">KYC / document verification</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Python</span>
+      <span class="chip">Excel / reporting</span>
+      <span class="chip">REST APIs</span>
+      <span class="chip">Jira · Zendesk · Intercom</span>
+      <span class="chip">Git / GitHub</span>
+      <span class="chip">HTML / CSS</span>
+      <span class="chip">Figma</span>
+    </div>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            const toggle = document.querySelector('.menu-toggle');
-            menu.classList.toggle('open');
-            menu.classList.toggle('collapsed');
-            toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
-        }
-    </script>
+    <div class="side-label">Languages</div>
+    <div class="lang">
+      <div><b>Russian</b><i>native</i></div>
+      <div><b>English</b><i>C1 · working language</i></div>
+      <div><b>Serbian</b><i>A1 · in progress</i></div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="reveal">
+      <div class="label">Profile</div>
+      <p class="lead">
+        Fraud operations specialist with four years across trust &amp; safety, payment support and data work.
+        At Paysend I review transactions in real time, take account block and release decisions, investigate
+        fraudulent activity and take complaints through to resolution with partner banks. I read numbers
+        carefully, keep audit trails clean, and use SQL, Excel and Python to turn case work into reports
+        that actually get used. Python is my second language — I build the small tools that remove a manual
+        step someone repeats every day.
+      </p>
+    </section>
+
+    <section class="reveal">
+      <div class="label">Experience</div>
+
+      <div class="job">
+        <div class="when now">Nov 2025 — Present</div>
+        <div>
+          <h3>Fraud Operator</h3>
+          <p class="org">Paysend Technology Limited, Ogranak Beograd · Belgrade, Serbia · remote</p>
+          <ul>
+            <li>Real-time transaction monitoring in a specialised fraud platform.</li>
+            <li>Blocking and releasing accounts; decisions on flagged transactions.</li>
+            <li>Investigating suspected fraudulent activity and documenting evidence.</li>
+            <li>Handling customer complaints and disputed cases end to end.</li>
+            <li>Liaising with third-party financial institutions after investigations.</li>
+            <li>Identifying new fraud patterns and feeding them back into detection rules.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jul 2024 — Oct 2025</div>
+        <div>
+          <h3>Database Administrator</h3>
+          <p class="org">D.O.O. Primeside · Belgrade, Serbia</p>
+          <ul>
+            <li>Handled payment-related customer cases, keeping resolution times inside the service agreement.</li>
+            <li>Built Excel models and reports to track performance metrics and support decisions.</li>
+            <li>Collected and analysed statistics to spot trends and improve process efficiency.</li>
+            <li>Wrote and delivered training material; onboarded and mentored interns.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Feb 2024 — Jun 2024</div>
+        <div>
+          <h3>Support Specialist</h3>
+          <p class="org">Toloka · remote</p>
+          <ul>
+            <li>Second-line support via Jira, Intercom, Zendesk and Discord; routed tickets to the right teams.</li>
+            <li>Verified user documents and identified “account farms” — blocking fraudulent accounts.</li>
+            <li>Ran payment processing and user permissions; resolved access issues without escalation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jun 2023 — Present</div>
+        <div>
+          <h3>Freelance Python Developer</h3>
+          <p class="org">Self-employed · remote</p>
+          <ul>
+            <li>Telegram bots from scratch: language-school sign-up, news redirect, studio booking with payments and Google Calendar.</li>
+            <li>Backend work in Python against REST APIs — data handling, webhooks, scheduled jobs.</li>
+            <li>Client-facing end to end: scoping, delivery, handover.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jul 2022 — Jan 2024</div>
+        <div>
+          <h3>Community Administrator</h3>
+          <p class="org">Game Discord server · remote</p>
+          <ul>
+            <li>Ran Discord and Project Zomboid server administration, moderation and support.</li>
+            <li>Doubled the player base with the moderation team — server reached #3 ranking in Germany.</li>
+            <li>Designed and ran in-game events; handled promotion and player onboarding.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Jul 2021 — Jul 2022</div>
+        <div>
+          <h3>Public Service Support</h3>
+          <p class="org">000K5 · remote</p>
+          <ul>
+            <li>Monitored and resolved negative client reviews for communal housing services.</li>
+            <li>De-escalated conflicts through direct communication; reduced repeat complaints.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="label">Education &amp; Courses</div>
+      <div class="entry">
+        <div class="when">2022 — 2023</div>
+        <div><h3>Python Developer</h3><p>SkyPro — online university for digital professions</p></div>
+      </div>
+      <div class="entry">
+        <div class="when">2023</div>
+        <div><h3>Python</h3><p>Kaggle — online course</p></div>
+      </div>
+      <div class="entry">
+        <div class="when">Graduated 2021</div>
+        <div><h3>Physics &amp; Mathematics Lyceum No. 4</h3><p>Yeysk, Russia — complete secondary education</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y">2026</span> Mikhail Iatsenko</span>
+      <span>Novi Sad, Serbia · remote · <a href="mailto:misha.yats@gmail.com">get in touch</a></span>
+    </footer>
+  </main>
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>
